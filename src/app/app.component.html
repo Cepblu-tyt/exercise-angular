@@ -360,6 +360,54 @@
 </table>
 
 
+  <br>
+  <br>
+
+
+  <table>
+    <thead>
+    <tr>
+      <th>
+        First name:
+      </th>
+      <th>
+        Last name:
+      </th>
+      <th>
+        Age:
+      </th>
+      <th>
+        Email:
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let teacher of teachers">
+
+      <td>{{ teacher.firstName }}</td>
+      <td>{{ teacher.lastName }}</td>
+      <td>{{ teacher.age }}</td>
+      <td>{{ teacher.email }}</td>
+
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+
+  <button class="card card-small" (click)="addStudent()">
+    <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+    <span>Add student </span> </button>
+
+  <button class="card card-small" (click)="addTeacher()">
+  <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+  <span>Add teacher </span> </button>
+
+
 </div>
 
 

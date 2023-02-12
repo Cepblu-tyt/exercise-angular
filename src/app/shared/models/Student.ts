@@ -1,19 +1,10 @@
 export class Student {
-  firstName: string;
-
-  lastName: string;
-  age: string;
-
-  role: string;
-
-  email: string;
+  name: string;
+  grade: string;
 
 
-  constructor(firstName: string, lastName: string, age: string, role: string, email: string) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-    this.role = role;
-    this.email = email;
+  constructor(name: string, grade: string) {
+    this.name = name;
+    this.grade = grade;
   }
 }

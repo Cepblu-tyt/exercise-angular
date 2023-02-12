@@ -2,47 +2,48 @@ import {Component, OnInit} from '@angular/core';
 import {Student} from "./shared/models/Student";
 import {Teacher} from "./shared/models/Teacher";
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   ngOnInit(): void {
-    this.students = this.fetchStudents();
-    this.teachers = this.fetchTeacher();
+    this.students = this.fetchStoodents();
+    this.teachers = this.fetchTeaachers();
   }
-  title = 'SDA exercise-angular';
-
+  title = 'angular-student-teacher-exercise';
 
   students: Student[] = [];
-  fetchStudents(): Student[]{
-    let students: Student[]=[];
-
-    students.push(new Student('Sass','Tamm','35','Student','s.tamm@gmail.com'));
-    students.push(new Student('Ivo','Linno','45','Student','i.linno@gmail.com'));
-
-
-    return students;
-  }
+  studentNames: string[] = ['Imbi', 'Liisu', 'August'];
 
   teachers: Teacher[] = [];
-  fetchTeacher(): Teacher[]{
-    let teachers: Teacher[]=[];
-
-    teachers.push(new Teacher('Vinod','John','35','Teacher','v.john@gmail.com'));
-    teachers.push(new Teacher('Niko','Lampi','45','Teacher','n.lampi@gmail.com'));
+  teacherNames: string[] = ['Vinod', 'Uche', 'Laur'];
 
 
-    return teachers;
+  fetchStoodents(): Student[] {
+    let stoodents: Student[] = [];
+    stoodents.push(new Student('Eedu', '6st grade'));
+    return stoodents;
   }
 
-  addStudent(){
+  fetchTeaachers(): Teacher[] {
+    let teaachers: Teacher[] = [];
+    teaachers.push(new Teacher('Udupets', 'mathematics'))
+    return teaachers;
+  }
 
-  };
+  addStudent() {
+    let studentName = this.studentNames.at(Math.floor(Math.random() * this.studentNames.length));
+    // @ts-ignore
+    this.students.push(new Student(studentName, '10th grade'))
+  }
 
-  addTeacher(){
-
-  };
-
+  addTeacher() {
+    let teacherName = this.teacherNames.at(Math.floor(Math.random() * this.teacherNames.length));
+    // @ts-ignore
+    this.teachers.push(new Teacher(teacherName, 'programming'))
+  }
 }

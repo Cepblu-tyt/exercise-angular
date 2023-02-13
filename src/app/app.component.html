@@ -302,61 +302,53 @@
   }
 </style>
 
-<!-- Toolbar in header -->
+<!-- Toolbar -->
 <div class="toolbar" role="banner">
   <img
     width="40"
     alt="Angular Logo"
     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
   />
-  <span>Angular - exercise 1</span>
+  <span>student-teacher app</span>
+
 
 </div>
 <div class="content" role="main">
 
   <h2>School</h2>
 
-  <div class="card-container">
-    <button class="card card-small" (click)="addStudent()">Add student</button>
-    <button class="card card-small" (click)="addTeacher()">Add teacher</button>
+  <!-- Highlight Card -->
+
+  <!-- Resources
+    <app-student [studentTitle]="studentsTitle" [students]="students" ></app-student>
+      <app-teacher [teacherTitle]="teacherTitle" [teachers]="teachers" ></app-teacher> -->
+
+
+  <div>
+    <table>
+      <tr>
+        <td>
+    <app-student-form></app-student-form>
+        </td>
+
+        <td>
+    <app-teacher-form></app-teacher-form>
+        </td>
+      </tr>
+    </table>
+
   </div>
-
-  <!--Table of students-->
-  <table>
-    <tr>
-      <td>
-
-      <table [border]="10" *ngIf="students.length">
-    <tr>
-      <th>Firstname</th>
-      <th>Grade</th>
-    </tr>
-    <tr *ngFor="let item of students">
-      <td>{{item.name}}</td>
-      <td>{{item.grade}}</td>
-    </tr>
-  </table>
-
-      </td>
-
-      <td>
-
-  <!--Table of teachers-->
-  <table [border]="10" *ngIf="teachers.length">
-    <tr>
-      <th>Firstname</th>
-      <th>Subject</th>
-    </tr>
-    <tr *ngFor="let item of teachers">
-      <td>{{item.name}}</td>
-      <td>{{item.subject}}</td>
-    </tr>
-  </table>
+</div>
 
 
+<!-- Terminal -->
 
-      </td>
-    </tr>
-  </table>
+<!-- Links -->
+
+<!-- Footer -->
+
+<footer>
+
+</footer>
 
 
